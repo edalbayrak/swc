@@ -7,7 +7,7 @@ const ExpanseScreen = () => {
     return (
         <SafeAreaView>
             <Text>
-                Expanse Screen
+                Expanse Screen deneme
             </Text>
         </SafeAreaView>
     );
