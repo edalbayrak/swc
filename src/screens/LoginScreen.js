@@ -43,6 +43,10 @@ const LoginScreen = ({ navigation }) => {
     );
 };
 
+LoginScreen.navigationOptions = {
+    headerShown: false,
+};
+
 const styles = StyleSheet.create({
     input: {
         marginTop: 10,

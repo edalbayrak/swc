@@ -5,10 +5,10 @@ import { AntDesign } from "@expo/vector-icons";
 const Header = ({ onSubmit, onSubmit2, buttonName, buttonName2 }) => {
     return (
         <View  style={styles.container}>
-            <TouchableOpacity onPress={() => onSubmit}>
+            <TouchableOpacity onPress={onSubmit}>
                 <AntDesign name={buttonName} size={28}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => onSubmit2}>
+            <TouchableOpacity onPress={onSubmit2}>
                 <AntDesign name={buttonName2} size={28}/>
             </TouchableOpacity>
         </View>

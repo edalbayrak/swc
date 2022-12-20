@@ -82,6 +82,24 @@ const SignupScreen = ({ navigation }) => {
     );
 };
 
+SignupScreen.navigationOptions = {
+    headerStatusBarHeight: 25,
+    headerTitle: () => {
+        return (
+            <View style={{ flexDirection:"row", alignItems:"center"}}>
+                <Image
+                    source={require("../../assets/favicon.png")}
+                    style={{ width:35, height:35}}
+                />
+                <Text>
+                    SWC
+                </Text>
+            </View>
+        );
+    },
+    headerLeft:() => null
+};
+
 const styles = StyleSheet.create({
     input: {
         marginHorizontal: 5,

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 import { Context as AuthContext } from "../context/AuthContext";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const AccountScreen = () => {
     const { state,signout } = useContext(AuthContext);
@@ -16,6 +17,10 @@ const AccountScreen = () => {
             />
         </View>
     );
+};
+
+AccountScreen.navigationOptions = {
+    tabBarIcon: <MaterialIcons name="account-circle" size={20} />
 };
 
 const styles = StyleSheet.create({});

@@ -13,14 +13,14 @@ const ExpanseScreen = () => {
     );
 };
 
-ExpanseScreen.navigationOptions = () => {
-    return {
-        headerRight: () => (
-            <TouchableOpacity>
-                <Feather name="plus" size={30} />
-            </TouchableOpacity>
-        )
-    };
+ExpanseScreen.navigationOptions = {
+    headerStatusBarHeight: 25,
+    title: "Add Expanse",
+    headerRight: () => (
+      <TouchableOpacity style={{ marginRight: 5}}>
+        <Feather name="check" size={30} />
+      </TouchableOpacity>
+    )
 };
 
 const styles = StyleSheet.create({});
