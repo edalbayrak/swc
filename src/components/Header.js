@@ -1,14 +1,15 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { navigate } from "../navigationRef";
 
-const Header = ({ onSubmit, onSubmit2, buttonName, buttonName2 }) => {
+const Header = ({ onSubmit, routeName, buttonName, buttonName2 }) => {
     return (
         <View  style={styles.container}>
-            <TouchableOpacity onPress={onSubmit}>
+            <TouchableOpacity onPress={() => navigate(routeName)}>
                 <AntDesign name={buttonName} size={28}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={onSubmit2}>
+            <TouchableOpacity onPress={onSubmit}>
                 <AntDesign name={buttonName2} size={28}/>
             </TouchableOpacity>
         </View>

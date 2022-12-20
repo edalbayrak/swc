@@ -11,7 +11,7 @@ const GroupsScreen = () => {
     return (
         <SafeAreaView style={{ flex:1}}>
             <Header
-                onSubmit={() => console.log(state.token)}
+                routeName={"AddGroup"}
                 buttonName="addusergroup"
                 onSubmit2={() => console.log(state.token)}
                 buttonName2="search1"

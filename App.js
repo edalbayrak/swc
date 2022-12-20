@@ -12,6 +12,7 @@ import FriendsScreen from "./src/screens/friendsScreen";
 import ResolveAuthScreen from "./src/screens/ResolveAuthScreen";
 import ExpanseScreen from "./src/screens/expanseScreen";
 import AddFriendScreen from "./src/screens/addFriendScreen";
+import AddGroupScreen from "./src/screens/addGroupScreen";
 import { Provider as AuthProvider } from "./src/context/AuthContext";
 import { setNavigator } from "./src/navigationRef";
 
@@ -34,7 +35,8 @@ const switchNavigator = createSwitchNavigator({
   mainFlow: createStackNavigator({
     mFlow: mFlow,
     Expanse: ExpanseScreen,
-    AddFriend: AddFriendScreen
+    AddFriend: AddFriendScreen,
+    AddGroup: AddGroupScreen
   })
 });
 
