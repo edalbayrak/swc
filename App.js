@@ -14,6 +14,7 @@ import ExpanseScreen from "./src/screens/expanseScreen";
 import AddFriendScreen from "./src/screens/addFriendScreen";
 import AddGroupScreen from "./src/screens/addGroupScreen";
 import { Provider as AuthProvider } from "./src/context/AuthContext";
+import { Provider as FriendProvider } from "./src/context/FriendContext";
 import { setNavigator } from "./src/navigationRef";
 
 //How to describe navigationOptions in one place???
@@ -52,10 +53,12 @@ const App = createAppContainer(switchNavigator);
 
 export default () => {
   return (
-    <AuthProvider>
-      <App
-        ref={(navigator) => { setNavigator(navigator) }}
-      />
-    </AuthProvider>
+    <FriendProvider>
+      <AuthProvider>
+        <App
+          ref={(navigator) => { setNavigator(navigator) }}
+        />
+      </AuthProvider>
+    </FriendProvider>
   );
 };
