@@ -1,9 +1,10 @@
-import React,{ useContext, useEffect } from "react";
+import React,{ useContext } from "react";
 import { View,Image, Button, Text, StyleSheet } from "react-native";
 import Spacer from "../components/Spacer";
 import { Context as AuthContext } from "../context/AuthContext";
+import { navigate } from "../navigationRef";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
     const { state } = useContext(AuthContext);
 
     return (
@@ -17,13 +18,13 @@ const HomeScreen = ({ navigation }) => {
             <Spacer/>
             < Button
                 title="Sign Up"
-                onPress={() => navigation.navigate("Signup")}
+                onPress={() => navigate("Signup")}
                 style={styles.button} 
             />
             <Spacer/>
             < Button
                 title="Login"
-                onPress={() => navigation.navigate("Login")}    
+                onPress={() => navigate("Login")}    
             />
             <Spacer/>
             < Button title="Sign in with Google"
@@ -31,6 +32,12 @@ const HomeScreen = ({ navigation }) => {
             />
         </View>
     );
+};
+
+HomeScreen.navigationOptions = () => {
+    return {
+      headerShown: false
+    }
 };
 
 const styles = StyleSheet.create({

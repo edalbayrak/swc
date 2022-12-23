@@ -38,7 +38,7 @@ const signup = dispatch => async ({ name, email, password, phone }) => {
         const response = await Api.post("/signup", { name, email, password, phone });
         await AsyncStorage.setItem("token", response.data.token);
         dispatch({ type: "signin", payload: response.data.token });
-        navigate("mainFlow");
+        navigate("Friends");
     } catch (err) {
         dispatch({
             type: "add_error",

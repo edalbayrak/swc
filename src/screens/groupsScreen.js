@@ -3,7 +3,6 @@ import { StyleSheet, SafeAreaView, Button } from "react-native";
 import { Context as AuthContext } from "../context/AuthContext";
 import Header from "../components/Header";
 import ExpanseButton from "../components/expanseButton";
-import { MaterialIcons } from "@expo/vector-icons";
 
 const GroupsScreen = () => {
     const { state } = useContext(AuthContext);
@@ -22,7 +21,7 @@ const GroupsScreen = () => {
 };
 
 GroupsScreen.navigationOptions = {
-    tabBarIcon: <MaterialIcons name="groups" size={20} />
+    headerShown: false
 };
 
 const styles = StyleSheet.create({});

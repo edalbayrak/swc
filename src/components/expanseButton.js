@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, FlatList, StyleSheet } from "react-native";
 import { AnimatedFAB } from "react-native-paper";
+import { ListItem } from "react-native-elements";
 import { navigate } from "../navigationRef";
 
 const ExpanseButton = ({ data }) => {
@@ -17,7 +18,19 @@ const ExpanseButton = ({ data }) => {
             <FlatList
                 onScroll={onScroll}
                 data={data}
-
+                keyExtractor={(item) => item._id}
+                renderItem={({item}) => {
+                    return (
+                        <ListItem>
+                            <ListItem.Content>
+                                <ListItem.Title>
+                                    {item.name}
+                                </ListItem.Title>
+                            </ListItem.Content>
+                            <ListItem.Chevron/>
+                        </ListItem>
+                    );
+                }}
             />
             <AnimatedFAB
                 icon={"plus"}

@@ -2,7 +2,6 @@ import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-navigation";
 import ExpanseButton from "../components/expanseButton";
-import { Feather } from "@expo/vector-icons";
 
 const ActivityScreen = () => {
     return (
@@ -15,8 +14,10 @@ const ActivityScreen = () => {
     );
 };
 
-ActivityScreen.navigationOptions = {
-    tabBarIcon: <Feather name="activity" size={20} />
+ActivityScreen.navigationOptions = () => {
+    return {
+        headerStatusBarHeight: 25
+    };
 };
 
 const styles = StyleSheet.create({});
